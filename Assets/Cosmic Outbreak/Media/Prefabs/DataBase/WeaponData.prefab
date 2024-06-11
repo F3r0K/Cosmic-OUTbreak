@@ -1,0 +1,167 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1360822401604504
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4715392832392498}
+  - component: {fileID: 114323996127282120}
+  m_Layer: 0
+  m_Name: WeaponData
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4715392832392498
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1360822401604504}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.05, y: 0.05, z: -0.15}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114323996127282120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1360822401604504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2a45390ffe91534a9b6bf78f802ba76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Weapons:
+  - WeaponName: Rifle
+    WeaponClass: 1
+    WeaponPrefab: {fileID: 1093050535257716, guid: 3ff58751fe0a7c14e826d1e4ed9cc348, type: 3}
+    WeaponImage: {fileID: 21300000, guid: 78454e9a19ee52d43a0d5737396e0b7f, type: 3}
+    MuzzleEffect: {fileID: 1890411601549848, guid: 373f2f7ba06ba754883ae91a8b653e4c, type: 3}
+    WeaponMagazine: 25
+    ReloadTime: 1.5
+    FireRate: 0.2
+    BulletId: 0
+    Bullet: {fileID: 1770173410670346, guid: 5d3a6f61a3e25654c88a36852ccd3afd, type: 3}
+    Damage: 10
+    BulletSpeed: 260
+    DelayToLaunch: 0
+    DelayToTurn: 0
+    WeaponDrop: {fileID: 1398164859803464, guid: 9d22aadb7eaae3041a6497b0f246afe5, type: 3}
+  - WeaponName: S.Rifle
+    WeaponClass: 1
+    WeaponPrefab: {fileID: 1097170376144410, guid: dd39d4c1447a83e42bac39fe87cb0f80, type: 3}
+    WeaponImage: {fileID: 21300000, guid: 02f6fc97fff373649b4cd7c933ebbc90, type: 3}
+    MuzzleEffect: {fileID: 1890411601549848, guid: 373f2f7ba06ba754883ae91a8b653e4c, type: 3}
+    WeaponMagazine: 10
+    ReloadTime: 3
+    FireRate: 0.5
+    BulletId: 1
+    Bullet: {fileID: 1918596692443766, guid: 4b5ca146c4348dc47a95937472314e57, type: 3}
+    Damage: 20
+    BulletSpeed: 100
+    DelayToLaunch: 0
+    DelayToTurn: 0
+    WeaponDrop: {fileID: 1154566298408816, guid: 005e5911966ee924d8b4c52b9959e7e0, type: 3}
+  - WeaponName: Uzi
+    WeaponClass: 1
+    WeaponPrefab: {fileID: 1564352147081996, guid: f416ce9980de69f4d98f5963c41d94b4, type: 3}
+    WeaponImage: {fileID: 21300000, guid: de400c84d10865b41b9d55eaee0c7d2f, type: 3}
+    MuzzleEffect: {fileID: 1890411601549848, guid: 373f2f7ba06ba754883ae91a8b653e4c, type: 3}
+    WeaponMagazine: 60
+    ReloadTime: 2
+    FireRate: 0.1
+    BulletId: 0
+    Bullet: {fileID: 1770173410670346, guid: 5d3a6f61a3e25654c88a36852ccd3afd, type: 3}
+    Damage: 20
+    BulletSpeed: 200
+    DelayToLaunch: 0
+    DelayToTurn: 0
+    WeaponDrop: {fileID: 1462660782747318, guid: 00ec7daaba0bff44aaad44f4dc57a462, type: 3}
+  - WeaponName: Pistol
+    WeaponClass: 2
+    WeaponPrefab: {fileID: 1564352147081996, guid: ae3ab98661bfb174781f2cc395a19fc8, type: 3}
+    WeaponImage: {fileID: 21300000, guid: 2eae758b6c8d91a419748e35d0c1424c, type: 3}
+    MuzzleEffect: {fileID: 1890411601549848, guid: 373f2f7ba06ba754883ae91a8b653e4c, type: 3}
+    WeaponMagazine: 60
+    ReloadTime: 1
+    FireRate: 0.8
+    BulletId: 0
+    Bullet: {fileID: 1770173410670346, guid: 5d3a6f61a3e25654c88a36852ccd3afd, type: 3}
+    Damage: 35
+    BulletSpeed: 200
+    DelayToLaunch: 0
+    DelayToTurn: 0
+    WeaponDrop: {fileID: 1462660782747318, guid: 2789b290fd0cb9f40b7d812ec0770a39, type: 3}
+  - WeaponName: Bat
+    WeaponClass: 3
+    WeaponPrefab: {fileID: 3818740565119714996, guid: 7c6643d47b60e8943a78032318b27071, type: 3}
+    WeaponImage: {fileID: 21300000, guid: 2f16d1cda606fb848bfcad85ab6e667a, type: 3}
+    MuzzleEffect: {fileID: 0}
+    WeaponMagazine: 1
+    ReloadTime: 1
+    FireRate: 0.8
+    BulletId: 1
+    Bullet: {fileID: 1770173410670346, guid: 3412455279904154799b6c28fe755f17, type: 3}
+    Damage: 15
+    BulletSpeed: 0
+    DelayToLaunch: 0.2
+    DelayToTurn: 0.25
+    WeaponDrop: {fileID: 1462660782747318, guid: d4fcc5affbc7cba4dbd6beb035950004, type: 3}
+  - WeaponName: Grenade
+    WeaponClass: 4
+    WeaponPrefab: {fileID: 1564352147081996, guid: 1c18b65eee437024a9429c5aefb6ab69, type: 3}
+    WeaponImage: {fileID: 21300000, guid: 22d1d7bafd65c354792a0de98ba71202, type: 3}
+    MuzzleEffect: {fileID: 0}
+    WeaponMagazine: 1
+    ReloadTime: 1
+    FireRate: 0.8
+    BulletId: 2
+    Bullet: {fileID: 1918596692443766, guid: 3206100ba566f0443961564a65c53ffc, type: 3}
+    Damage: 15
+    BulletSpeed: 100
+    DelayToLaunch: 0.2
+    DelayToTurn: 0.25
+    WeaponDrop: {fileID: 3037416713337357835, guid: d77845a70071d6f4d8891aa87638b9ef, type: 3}
+  - WeaponName: Sword
+    WeaponClass: 3
+    WeaponPrefab: {fileID: 6870015955680093477, guid: 6ce10d0ee0e2b744c9896786d38e44ba, type: 3}
+    WeaponImage: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+    MuzzleEffect: {fileID: 0}
+    WeaponMagazine: 1
+    ReloadTime: 1
+    FireRate: 0.8
+    BulletId: 1
+    Bullet: {fileID: 1770173410670346, guid: 3412455279904154799b6c28fe755f17, type: 3}
+    Damage: 25
+    BulletSpeed: 0
+    DelayToLaunch: 0.2
+    DelayToTurn: 0.25
+    WeaponDrop: {fileID: 1166047237321772687, guid: 4822401d13b57454f99b8c7fdc5b6fb6, type: 3}
+  - WeaponName: Crossbow
+    WeaponClass: 1
+    WeaponPrefab: {fileID: 4516523987102767481, guid: e27023fc445016640a9496c63b18df55, type: 3}
+    WeaponImage: {fileID: 21300000, guid: 6de3a36ae21c745d2830571149119fba, type: 3}
+    MuzzleEffect: {fileID: 0}
+    WeaponMagazine: 1
+    ReloadTime: 2
+    FireRate: 0.7
+    BulletId: 3
+    Bullet: {fileID: 968447971374948422, guid: 74d1bc3cd1069bb41a8733ada8a0b5d2, type: 3}
+    Damage: 70
+    BulletSpeed: 160
+    DelayToLaunch: 0
+    DelayToTurn: 0
+    WeaponDrop: {fileID: 4516523987102767481, guid: e27023fc445016640a9496c63b18df55, type: 3}

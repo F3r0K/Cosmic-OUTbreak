@@ -1,0 +1,4 @@
+You must import first:
+"Assets\Animmal\Common\ThirdPartyIntegration\_IntegrationImportPackages\DoTweenIntergration"
+
+This will add "Display Dotween Animator" (Context menu -> Animmal/DisplayBehavior/ThirdParty/DoTweenPro/Display Dotween Animator) which can be used to play custom DotweenPro animations to show/hide items

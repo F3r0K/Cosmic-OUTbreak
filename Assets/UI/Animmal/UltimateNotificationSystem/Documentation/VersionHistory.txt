@@ -1,0 +1,17 @@
+Version 1.10
+- The IDisplayable interface was added to Animmal namespace and Notification Display behaviors has been made into generic reusable display behaviors 
+- Status callbacks object added for ShowNotification functions in Notification Manager and Notification Display so you can listen to notification lifetime events or control the behavior
+- Added ability to show or hide notificaiton displays with animations. This is useful if you want to show/hide all of notification ui without disturbing Notification items. For example in cinematics. 
+- Some basic unity events moved to Animmal namespace 
+- Added new Example demos that show how to build tutorials, hide all notifications and use various layouts like Horizontal, Vertical, Grid, Scrollview.
+- Added Adventure Creator Support
+- Added DoTweenPro Support
+- Integration packages updated to support these new features. 
+
+Version 1.01 
+- Improved bulk operations. 
+- Fix issues with pause/disable bulk operations. 
+- Fixed issue with animator requeu-ing. 
+- Animator example - added start animation in a hidden state to stop first frame from appearing shown in rare cases. 
+- Added ability to disable queing behavior on notification display inspector altogether. 
+- Button alert type inside demo scenes made unqueable and 0 cooldown. 

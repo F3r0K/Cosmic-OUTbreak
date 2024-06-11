@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccd27dd84b2b0b846a4873a1f56f5852, type: 3}
+  m_Name: InputManager
+  m_EditorClassIdentifier: 
+  AllKeys:
+  - Function: Up
+    Key: 119
+    Description: Walk Forward
+  - Function: Down
+    Key: 115
+    Description: Walk Backward
+  - Function: Left
+    Key: 97
+    Description: Walk Left
+  - Function: Right
+    Key: 100
+    Description: Walk Right
+  - Function: Jump
+    Key: 32
+    Description: Jump
+  - Function: Pause
+    Key: 27
+    Description: Pause
+  - Function: Run
+    Key: 304
+    Description: Run
+  - Function: Crouch
+    Key: 99
+    Description: Crounch

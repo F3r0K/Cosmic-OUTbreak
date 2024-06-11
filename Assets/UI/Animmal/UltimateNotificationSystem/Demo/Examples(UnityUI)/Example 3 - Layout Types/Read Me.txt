@@ -1,0 +1,2 @@
+Examples shown here use unity layouts to achieve different behavior when showing multiple items. Horizontal, Vertical, Grid and Scrolling behaviors.
+Checkout Notification Display Gameobjects for setup. Take note of UI helper components that reset layout group when new item is spawned. 

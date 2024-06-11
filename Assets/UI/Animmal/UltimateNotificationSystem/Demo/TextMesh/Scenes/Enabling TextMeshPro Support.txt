@@ -1,0 +1,1 @@
+To enable text mesh pro support got to EDIT/PROJECT SETTINGS/PLAYER and add TMP_PRESENT; in Scripting Define Symbols field.

@@ -1,0 +1,4 @@
+You can add Display Behavior scripts to NotificationDisplay as well to Hide/Show them using various animations. 
+You can call Hide/Show Display on both NotificationDisplay directly and NotificationManager. 
+Notification Manager also allows to Show/Hide all the Displays at once for example for cinematics. 
+Hiding NotificationDisplay does not stop it from receiving new items if you don't disable gameobject in animation. 

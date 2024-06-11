@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &105238
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 407954}
+  - component: {fileID: 11463480}
+  m_Layer: 0
+  m_Name: CompassPOI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &407954
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 105238}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 12.557338, y: 0.7783052, z: -43.74028}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &11463480
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 105238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78ba861a214074aa4bdac708dcacc9fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  visibility: 0
+  visibleDistanceOverride: 0
+  title: Unnamed Location
+  titleVisibility: 0
+  canBeVisited: 1
+  hideWhenVisited: 0
+  isVisited: 0
+  visitedText: LOCATION DISCOVERED
+  visitedAudioClip: {fileID: 0}
+  radius: 0
+  iconNonVisited: {fileID: 21300000, guid: 1b2c3285fb5124166bd08b31551131b9, type: 3}
+  iconVisited: {fileID: 21300000, guid: f2eaed57a12e74124932795a0c5a7f00, type: 3}
+  tintColor: {r: 1, g: 1, b: 1, a: 1}
+  showPlayModeGizmo: 0
+  clampPosition: 0
+  beaconAudioClip: {fileID: 0}
+  dontDestroyOnLoad: 0
+  heartbeatEnabled: 0
+  heartbeatAudioClip: {fileID: 0}
+  heartbeatDistance: 20
+  heartbeatInterval:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0.25
+      inSlope: 0
+      outSlope: 2.75
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 3
+      inSlope: 2.75
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  miniMapVisibility: 0
+  miniMapClampPosition: 0
+  distanceToCameraSQR: 0
+  iconScale: {x: 0, y: 0, z: 0}
+  iconAlpha: 0
+  id: 0
+  miniMapIconScale: {x: 0, y: 0, z: 0}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: iconNonVisited
+      value: 
+      objectReference: {fileID: 21300000, guid: 1b2c3285fb5124166bd08b31551131b9,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: iconVisited
+      value: 
+      objectReference: {fileID: 21300000, guid: f2eaed57a12e74124932795a0c5a7f00,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: visitedText
+      value: LOCATION DISCOVERED
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: title
+      value: Unnamed Location
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 105238}
+  m_IsPrefabParent: 1

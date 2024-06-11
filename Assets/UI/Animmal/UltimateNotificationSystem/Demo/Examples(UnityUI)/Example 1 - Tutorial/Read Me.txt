@@ -1,0 +1,4 @@
+This tutorial uses Callobject object NotificationStatus that is returned when calling ShowNotification() on NotificationManager or NotificationDisplay. 
+You can add listener to StatusChangedEvent, and check CurrentStatus to learn current state of notification like Skipped, Queued, Shown, Hidden. 
+
+Look at TutorialDemo.cs script for this in action.
