@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< Updated upstream:Assets/Low Poly Weapons VOL.1.meta
 guid: 5d78f0d941c224740b25f28d7cb87abe
+========
+guid: 62d9e6b7fc86f4548af861bd67a6a869
+>>>>>>>> Stashed changes:Assets/Plugins/Easy Save 3/Resources/ES3.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
