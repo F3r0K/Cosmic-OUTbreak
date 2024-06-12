@@ -6,9 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Cosmic Outbreak/Demo/2_DemoSceneMovile.unity
+    path: Assets/Cosmic Outbreak/Demo/MainScene.unity
     guid: c42232b5c9c9563428f5e568845968bb
   - enabled: 1
-    path: Assets/Cosmic Outbreak/Demo/MainScene.unity
+    path: Assets/Cosmic Outbreak/Demo/DemoScripts/1.unity
     guid: 9167c2f54098b9843bdb392ed6756f89
   m_configObjects: {}

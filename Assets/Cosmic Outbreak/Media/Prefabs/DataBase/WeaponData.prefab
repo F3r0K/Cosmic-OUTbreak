@@ -82,10 +82,10 @@ MonoBehaviour:
     MuzzleEffect: {fileID: 1890411601549848, guid: 373f2f7ba06ba754883ae91a8b653e4c, type: 3}
     WeaponMagazine: 60
     ReloadTime: 2
-    FireRate: 0.1
+    FireRate: 0.12
     BulletId: 0
     Bullet: {fileID: 1770173410670346, guid: 5d3a6f61a3e25654c88a36852ccd3afd, type: 3}
-    Damage: 20
+    Damage: 9
     BulletSpeed: 200
     DelayToLaunch: 0
     DelayToTurn: 0
@@ -153,7 +153,7 @@ MonoBehaviour:
   - WeaponName: Crossbow
     WeaponClass: 1
     WeaponPrefab: {fileID: 4516523987102767481, guid: e27023fc445016640a9496c63b18df55, type: 3}
-    WeaponImage: {fileID: 21300000, guid: 6de3a36ae21c745d2830571149119fba, type: 3}
+    WeaponImage: {fileID: 21300000, guid: b7492be94f1bb444eb62a064a2bc14bc, type: 3}
     MuzzleEffect: {fileID: 0}
     WeaponMagazine: 1
     ReloadTime: 2
@@ -165,3 +165,33 @@ MonoBehaviour:
     DelayToLaunch: 0
     DelayToTurn: 0
     WeaponDrop: {fileID: 4516523987102767481, guid: e27023fc445016640a9496c63b18df55, type: 3}
+  - WeaponName: MP2094
+    WeaponClass: 1
+    WeaponPrefab: {fileID: 1263772146394437730, guid: 65c6c392bd48d954fab3eee3965e4a79, type: 3}
+    WeaponImage: {fileID: 21300000, guid: 79cf4bf6348ff324ab5d4633ccf21e71, type: 3}
+    MuzzleEffect: {fileID: 0}
+    WeaponMagazine: 30
+    ReloadTime: 1.6
+    FireRate: 0.19
+    BulletId: 0
+    Bullet: {fileID: 1770173410670346, guid: 5d3a6f61a3e25654c88a36852ccd3afd, type: 3}
+    Damage: 11
+    BulletSpeed: 258
+    DelayToLaunch: 0
+    DelayToTurn: 0
+    WeaponDrop: {fileID: 9184370910684908723, guid: 294323aee19a78948a9a9ac30e7ddc1e, type: 3}
+  - WeaponName: M249
+    WeaponClass: 1
+    WeaponPrefab: {fileID: 3017805249334063598, guid: 770a65d992a59f04c8a0e96749a5cba0, type: 3}
+    WeaponImage: {fileID: 21300000, guid: 4d08218abe530dc499dba16ab381f3cc, type: 3}
+    MuzzleEffect: {fileID: 0}
+    WeaponMagazine: 100
+    ReloadTime: 6
+    FireRate: 0.14
+    BulletId: 0
+    Bullet: {fileID: 1770173410670346, guid: 5d3a6f61a3e25654c88a36852ccd3afd, type: 3}
+    Damage: 14
+    BulletSpeed: 258
+    DelayToLaunch: 0
+    DelayToTurn: 0
+    WeaponDrop: {fileID: 2825808527181849026, guid: 8a1dd5fdbb2105d4881f5225fe78d48a, type: 3}
