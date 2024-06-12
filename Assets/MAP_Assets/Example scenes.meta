@@ -1,9 +1,13 @@
 fileFormatVersion: 2
 guid: c3044d2c539506749a9607c66c189c14
 folderAsset: yes
+<<<<<<< Updated upstream:Assets/MAP_Assets/Example scenes.meta
 timeCreated: 1487089022
 licenseType: Store
+=======
+>>>>>>> Stashed changes:Assets/MAP_Assets/PolygonSciFiSpace/Shaders.meta
 DefaultImporter:
+  externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
