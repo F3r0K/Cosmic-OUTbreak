@@ -180,3 +180,18 @@ MonoBehaviour:
     DelayToLaunch: 0
     DelayToTurn: 0
     WeaponDrop: {fileID: 9184370910684908723, guid: 294323aee19a78948a9a9ac30e7ddc1e, type: 3}
+  - WeaponName: M249
+    WeaponClass: 1
+    WeaponPrefab: {fileID: 4532907687189456580, guid: 770a65d992a59f04c8a0e96749a5cba0, type: 3}
+    WeaponImage: {fileID: 21300000, guid: 4d08218abe530dc499dba16ab381f3cc, type: 3}
+    MuzzleEffect: {fileID: 0}
+    WeaponMagazine: 100
+    ReloadTime: 1.6
+    FireRate: 0.15
+    BulletId: 0
+    Bullet: {fileID: 1770173410670346, guid: 5d3a6f61a3e25654c88a36852ccd3afd, type: 3}
+    Damage: 11
+    BulletSpeed: 301
+    DelayToLaunch: 0
+    DelayToTurn: 0
+    WeaponDrop: {fileID: 6057520956310625351, guid: 9a8a0296f940c45459f439ac884c7750, type: 3}

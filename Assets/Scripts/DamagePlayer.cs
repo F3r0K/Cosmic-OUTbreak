@@ -41,10 +41,12 @@ public class DamagePlayer : MonoBehaviour
     {
         if(isTrig == true)
         {
-            yield return new WaitForSeconds(0.5f);
+            isTrig = false;
+            yield return new WaitForSeconds(0.7f);
             anim.SetTrigger("Attack");
             mySource.PlayOneShot(myClip);
             LevelHealth.levelHealth -= 10;
+            isTrig = true;
         }
         
     }

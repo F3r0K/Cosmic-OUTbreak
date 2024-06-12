@@ -536,6 +536,8 @@ GameObject:
   - component: {fileID: 4398322028014819390}
   - component: {fileID: 870988777394534923}
   - component: {fileID: 6150906896829743878}
+  - component: {fileID: 3858052341209423528}
+  - component: {fileID: 4834187890541166763}
   m_Layer: 0
   m_Name: Zombie
   m_TagString: Untagged
@@ -624,6 +626,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e7cc0e663758924e8cd2be289274923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  A_Dead: {fileID: 0}
+  killCoins: 10
   MaxHitPoint: 100
   CurrentHitPoint: 0
   PopUpPrefab: {fileID: 1156348031185224, guid: 2ceac868d1282cc48bb98d72fb84f343, type: 3}
@@ -653,6 +657,33 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!65 &3858052341209423528
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1776966266084158026}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7936077, y: 1.7528813, z: 0.55871964}
+  m_Center: {x: 0.04054737, y: 1.0843176, z: 0.0948925}
+--- !u!136 &4834187890541166763
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1776966266084158026}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.28779316
+  m_Height: 1.9401746
+  m_Direction: 1
+  m_Center: {x: 0.0005273819, y: 1.0137396, z: 0}
 --- !u!1 &1786999476906242876
 GameObject:
   m_ObjectHideFlags: 0

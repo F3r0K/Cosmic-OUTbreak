@@ -1,18 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class REPe : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public int currectrep = 0;
+    public int maxrep = 100;
+    public int lvlRep= 0;
+    public Slider slideer;
+    public Text LvlText;
+
+    private void Start()
     {
+        slideer.maxValue = maxrep;
+        slideer.value = currectrep;
         
     }
-
-    // Update is called once per frame
-    void Update()
+   public void OpenNoote()
     {
-        
+        if(slideer.maxValue <= slideer.value)
+        {
+            lvlRep++;
+            LvlText.text = "Уровень: " + lvlRep;
+           
+            slideer.value = 0;
+            currectrep = 0;
+        }
     }
 }
