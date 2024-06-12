@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e76d29bd190b724f87a88c0225bfcc1, type: 3}
+  m_Name: ShaderReferences
+  m_EditorClassIdentifier: 
+  m_FogOfWarComputeShader: {fileID: 7200000, guid: 9e6a2748c915f92488bb8bf2d46fe992, type: 3}
+  m_UpscaleComputeShader: {fileID: 7200000, guid: af9437170b3dfe1408b6ce66a52e4292, type: 3}
+  m_LerpComputeShader: {fileID: 7200000, guid: dee0278c880de7d428293344df45739e, type: 3}
+  m_FogOfWarCheckComputeShader: {fileID: 7200000, guid: f258afe4f69ea4341add698a0e3c11ae, type: 3}
+  m_BlurShader: {fileID: 4800000, guid: 3bbd16c03cf8d214e9933395476082d1, type: 3}

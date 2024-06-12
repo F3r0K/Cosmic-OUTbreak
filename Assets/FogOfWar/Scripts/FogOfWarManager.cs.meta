@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 5a92f559ea1694b4f8dc464bc6fb70ce
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - m_ShaderReferencesObject: {fileID: 11400000, guid: 79202bc8abcb86c43a00cbb89869742e, type: 2}
+  - m_FogPlane: {instanceID: 0}
+  - m_FogOfWarOutput: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -378,6 +378,7 @@ namespace TopDownShooter
         {
             if (!CanDash || DashColdown > 0 || _flyJetPack)
             {
+                
                 return;
             }
 
@@ -388,7 +389,7 @@ namespace TopDownShooter
                 Instantiate(DashEffect, transform.position, transform.rotation);
             }
 
-            SetDashAnimation();
+            PlayerAnimator.SetTrigger("Roll");
             StartCoroutine(Dashing(DashForce / 10));
 
             if (_direction != Vector3.zero && _move != Vector3.zero)

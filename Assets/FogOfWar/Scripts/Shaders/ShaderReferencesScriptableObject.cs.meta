@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 8e76d29bd190b724f87a88c0225bfcc1
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - m_FogOfWarComputeShader: {fileID: 7200000, guid: 9e6a2748c915f92488bb8bf2d46fe992,
+      type: 3}
+  - m_UpscaleComputeShader: {fileID: 7200000, guid: af9437170b3dfe1408b6ce66a52e4292,
+      type: 3}
+  - m_LerpComputeShader: {fileID: 7200000, guid: dee0278c880de7d428293344df45739e,
+      type: 3}
+  - m_FogOfWarCheckComputeShader: {fileID: 7200000, guid: f258afe4f69ea4341add698a0e3c11ae,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

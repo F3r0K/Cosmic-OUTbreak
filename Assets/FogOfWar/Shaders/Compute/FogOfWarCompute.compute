@@ -1,0 +1,135 @@
+﻿#pragma kernel CSFogOfWar
+
+struct VisionPoint{
+	float1 range;
+	float3 worldposition;
+};
+
+static const float PI = 3.14159265f;
+float3 WorldPosition;
+float2 Size;
+float CellSize;
+int VisionPointCount;
+RWStructuredBuffer<VisionPoint> VisionPoints;
+RWTexture2D<float1> CollisionMask;
+RWTexture2D<float1> Result;
+
+
+bool LineCheck(int2 A, int2 B)
+{
+        //check the line of sight
+        bool steep = (abs(B.y - A.y) > abs(B.x - A.x));
+        if (steep)
+        {
+            int TempA = A.x;
+            A.x = A.y;
+            A.y = TempA;
+
+            int TempB = B.x;
+            B.x = B.y;
+            B.y = TempB;
+        }
+
+        if (A.x > B.x)
+        {
+            int2 Temp = A;
+            A = B;
+            B = Temp;
+        }
+
+        float dx = B.x - A.x;
+        float dy = abs(B.y - A.y);
+
+        float error = dx / 2.0f;
+        int yStep = (A.y < B.y) ? 1 : -1;
+        int y = (int)A.y;
+
+        int maxX = (int)B.x;
+
+        int x;
+        for (x = (int)A.x; x < maxX; x++)
+        {
+            if (steep)
+            {
+                if (CollisionMask[int2(y, x)] >= 1.0f) return false;
+            }
+            else
+            {
+                if (CollisionMask[int2(x, y)] >= 1.0f) return false;
+            }
+
+            error -= dy;
+            if (error < 0)
+            {
+                y += yStep;
+                error += dx;
+            }
+        }
+
+        return true;
+}
+
+int2 WorldPositionToMapPosition(float3 position)
+{
+     position -= WorldPosition;
+     position += float3(Size.x / 2, 0, Size.y / 2);
+	 position /= CellSize;
+     return int2((int)position.x, (int)position.z);
+}
+
+
+float3 MapPositionToWorldPosition(int2 position)
+{
+    float3 worldposition = float3(position.x, 0, position.y);
+	worldposition *= CellSize;
+    worldposition += WorldPosition;
+    worldposition -= float3(Size.x / 2, 0, Size.y / 2);
+
+    return worldposition;
+}
+
+
+float1 GetVisibleValue(int2 position)
+{
+        if (CollisionMask[position] >= 1.0)
+            return 0.0;
+
+
+		int closestvision=-1;
+		float closestdistancefromborder=0; //Set to min size
+		float closestdistance;
+		for(int i=0;i<VisionPointCount;i++)
+		{
+			VisionPoint visionpoint=VisionPoints[i];
+
+			float distance=length(visionpoint.worldposition-MapPositionToWorldPosition(position));
+			float distancefromborder=visionpoint.range-distance;
+
+
+			if(distance<visionpoint.range)
+				if(i==-1 || distancefromborder>closestdistancefromborder)
+					if(LineCheck(WorldPositionToMapPosition(visionpoint.worldposition),position)){
+						closestvision=i;
+						closestdistance=distance;
+						closestdistancefromborder=distancefromborder;
+					}
+		}
+
+		if(closestvision!=-1){
+			float fadeoutrange=2.0;
+			float maxrange=	VisionPoints[closestvision].range;
+			float diff=maxrange-closestdistance;
+
+			return clamp(diff,0,fadeoutrange)/fadeoutrange;
+		}
+
+        return 0.0;
+}
+
+
+
+[numthreads(8,8,1)]
+void CSFogOfWar(uint3 id : SV_DispatchThreadID)
+{
+	Result[id.xy]=GetVisibleValue(id.xy);
+}

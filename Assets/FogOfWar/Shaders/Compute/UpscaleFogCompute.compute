@@ -1,0 +1,132 @@
+﻿#pragma kernel CSUpscale
+
+int ResolutionX;
+int ResolutionY;
+
+RWTexture2D<float4> Input;
+
+RWTexture2D<float4> Result;
+
+
+
+static float pixels0000[4][4]={{1.0,1.0,1.0,1.0},{1.0,1.0,1.0,1.0},{1.0,1.0,1.0,1.0},{1.0,1.0,1.0,1.0}};
+static float pixels0001[4][4]={{1.0,1.0,1.0,1.0},{1.0,1.0,1.0,1.0},{1.0,1.0,1.0,0.5},{1.0,1.0,0.5,0.0}};
+static float pixels0010[4][4]={{1.0,1.0,1.0,1.0},{1.0,1.0,1.0,1.0},{0.5,1.0,1.0,1.0},{0.0,0.5,1.0,1.0}};
+static float pixels0011[4][4]={{1.0,1.0,1.0,1.0},{1.0,1.0,1.0,1.0},{0.0,0.0,0.0,0.0},{0.0,0.0,0.0,0.0}};
+static float pixels0100[4][4]={{1.0,1.0,0.5,0.0},{1.0,1.0,1.0,0.5},{1.0,1.0,1.0,1.0},{1.0,1.0,1.0,1.0}};
+static float pixels0110[4][4]={{1.0,1.0,0.5,0.0},{1.0,1.0,1.0,0.5},{0.5,1.0,1.0,1.0},{0.0,0.5,1.0,1.0}};
+static float pixels0101[4][4]={{1.0,1.0,0.0,0.0},{1.0,1.0,0.0,0.0},{1.0,1.0,0.0,0.0},{1.0,1.0,0.0,0.0}};
+static float pixels0111[4][4]={{1.0,0.5,0.0,0.0},{0.5,0.0,0.0,0.0},{0.0,0.0,0.0,0.0},{0.0,0.0,0.0,0.0}};
+static float pixels1000[4][4]={{0.0,0.5,1.0,1.0},{0.5,1.0,1.0,1.0},{1.0,1.0,1.0,1.0},{1.0,1.0,1.0,1.0}};
+static float pixels1001[4][4]={{0.0,0.5,1.0,1.0},{0.5,1.0,1.0,1.0},{1.0,1.0,1.0,0.5},{1.0,1.0,0.5,0.0}};
+static float pixels1010[4][4]={{0.0,0.0,1.0,1.0},{0.0,0.0,1.0,1.0},{0.0,0.0,1.0,1.0},{0.0,0.0,1.0,1.0}};
+static float pixels1011[4][4]={{0.0,0.0,0.5,1.0},{0.0,0.0,0.0,0.5},{0.0,0.0,0.0,0.0},{0.0,0.0,0.0,0.0}};
+static float pixels1100[4][4]={{0.0,0.0,0.0,0.0},{0.0,0.0,0.0,0.0},{1.0,1.0,1.0,1.0},{1.0,1.0,1.0,1.0}};
+static float pixels1101[4][4]={{0.0,0.0,0.0,0.0},{0.0,0.0,0.0,0.0},{0.5,0.0,0.0,0.0},{1.0,0.5,0.0,0.0}};
+static float pixels1110[4][4]={{0.0,0.0,0.0,0.0},{0.0,0.0,0.0,0.0},{0.0,0.0,0.0,0.5},{0.0,0.0,0.5,1.0}};
+static float pixels1111[4][4]={{0.0,0.0,0.0,0.0},{0.0,0.0,0.0,0.0},{0.0,0.0,0.0,0.0},{0.0,0.0,0.0,0.0}};
+
+
+static const float pixellist[2][4][4];
+
+float4 GetNeighbourRight(int2 pos){
+	uint x=pos.x+1;
+	uint y=pos.y;
+
+	return Input[uint2(x,y)];
+}
+float4 GetNeighbourDown(int2 pos){
+	uint x=pos.x;
+	uint y=pos.y+1;
+
+	return Input[uint2(x,y)];
+}
+float4 GetNeighbourDownRight(int2 pos){
+	uint x=pos.x+1;
+	uint y=pos.y+1;
+
+	return Input[uint2(x,y)];
+}
+
+[numthreads(8,8,1)]
+void CSUpscale (uint3 id : SV_DispatchThreadID)
+{	
+	uint2 correctedpos=int2(id.x,id.y);
+	uint2 lefttop=correctedpos.xy-correctedpos.xy%4;
+
+	uint2 originalpos=lefttop/4;
+
+	float4 pixel1=Input[originalpos];
+	float4 pixel2=GetNeighbourRight(originalpos);
+	float4 pixel3=GetNeighbourDown(originalpos);
+	float4 pixel4=GetNeighbourDownRight(originalpos);
+
+	int index=0;
+	if(pixel1.r>0.05)
+		index+=2;
+	if(pixel2.r>0.05)
+		index+=1;
+	if(pixel3.r>0.05)
+		index+=8;
+	if(pixel4.r>0.05)
+		index+=4;
+
+
+	correctedpos=int2(id.y,id.x);
+	uint2 indexinarray=correctedpos.xy%4;
+	float scalevalue;
+
+	switch(index){
+		case 0:
+			scalevalue=pixels0000[3-indexinarray.x][indexinarray.y];
+        break;
+		case 1:
+			scalevalue=pixels0001[3-indexinarray.x][indexinarray.y];
+        break;
+		case 2:
+			scalevalue=pixels0010[3-indexinarray.x][indexinarray.y];
+        break;
+		case 3:
+			scalevalue=pixels0011[3-indexinarray.x][indexinarray.y];
+        break;
+		case 4:
+			scalevalue=pixels0100[3-indexinarray.x][indexinarray.y];
+        break;
+
+		case 5:
+			scalevalue=pixels0101[3-indexinarray.x][indexinarray.y];
+        break;
+		case 6:
+			scalevalue=pixels0110[3-indexinarray.x][indexinarray.y];
+        break;
+		case 7:
+			scalevalue=pixels0111[3-indexinarray.x][indexinarray.y];
+        break;
+		case 8:
+			scalevalue=pixels1000[3-indexinarray.x][indexinarray.y];
+        break;
+		case 9:
+			scalevalue=pixels1001[3-indexinarray.x][indexinarray.y];
+        break;
+		case 10:
+			scalevalue=pixels1010[3-indexinarray.x][indexinarray.y];
+        break;
+		case 11:
+			scalevalue=pixels1011[3-indexinarray.x][indexinarray.y];
+        break;
+		case 12:
+			scalevalue=pixels1100[3-indexinarray.x][indexinarray.y];
+        break;
+		case 13:
+			scalevalue=pixels1101[3-indexinarray.x][indexinarray.y];
+        break;
+		case 14:
+			scalevalue=pixels1110[3-indexinarray.x][indexinarray.y];
+        break;
+		case 15:
+			scalevalue=pixels1111[3-indexinarray.x][indexinarray.y];
+        break;
+	}
+
+	  Result[id.xy] = lerp(float4(0,0,0,1),float4(0,0,0,0),(1.0-scalevalue)*pixel1.r);
+}

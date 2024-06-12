@@ -29,7 +29,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6057520956310625351}
-  m_LocalRotation: {x: -0, y: 0.9812653, z: -0.19266132, w: 0}
+  m_LocalRotation: {x: 0, y: 0.9812658, z: -0.19265895, w: 0}
   m_LocalPosition: {x: 7.481, y: 1.356, z: -10.069}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c126b3ed91fa5cd49a0fe98efc2d3a9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WeaponIndex: 8
+  WeaponIndex: 9
   WeaponBulletAmount: 100
   TakenEffect: {fileID: 1659452312643484, guid: 8c397d40f44b56f4c96050171e074687, type: 3}
   ActivateTime: 3
