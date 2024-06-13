@@ -1,18 +1,22 @@
 fileFormatVersion: 2
 guid: 07a81e102779442468658321a8fb246a
-timeCreated: 1425942299
-licenseType: Store
 TrueTypeFontImporter:
-  serializedVersion: 2
+  externalObjects: {}
+  serializedVersion: 4
   fontSize: 16
-  forceTextureCase: -2
-  characterSpacing: 1
-  characterPadding: 0
+  forceTextureCase: -1
+  characterSpacing: 0
+  characterPadding: 1
   includeFontData: 1
-  use2xBehaviour: 0
-  fontNames: []
+  fontNames:
+  - Bender
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: aa074c83586bd4d47a9cbcd3a090449e, type: 3}
   customCharacters: 
-  fontRenderingMode: 0
+  fontRenderingMode: 2
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
   userData: 
   assetBundleName: 
   assetBundleVariant: 

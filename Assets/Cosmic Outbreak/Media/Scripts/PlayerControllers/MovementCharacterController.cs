@@ -389,11 +389,12 @@ namespace TopDownShooter
                 Instantiate(DashEffect, transform.position, transform.rotation);
             }
 
-            PlayerAnimator.SetTrigger("Roll");
+            
             StartCoroutine(Dashing(DashForce / 10));
 
             if (_direction != Vector3.zero && _move != Vector3.zero)
             {
+               
                 _velocity += Vector3.Scale(_move,
                     DashForce * new Vector3((Mathf.Log(1f / (Time.deltaTime * DragForce.x + 1)) / -Time.deltaTime),
                         0, (Mathf.Log(1f / (Time.deltaTime * DragForce.z + 1)) / -Time.deltaTime)));

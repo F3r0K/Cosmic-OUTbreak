@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 33679639254865250}
   - component: {fileID: 23461516534744948}
   - component: {fileID: -2152470902508493883}
+  - component: {fileID: 1375879125}
+  - component: {fileID: 1375879129}
   m_Layer: 0
   m_Name: SM_Bld_Wall_Corner_Pillar_05
   m_TagString: Untagged
@@ -26,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1313527059013082}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -101,10 +103,31 @@ LODGroup:
   - screenRelativeHeight: 0.6
     fadeTransitionWidth: 0
     renderers: []
-  - screenRelativeHeight: 0.3
-    fadeTransitionWidth: 0
-    renderers: []
-  - screenRelativeHeight: 0.1
-    fadeTransitionWidth: 0
-    renderers: []
+  m_Enabled: 0
+--- !u!65 &1375879125
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1313527059013082}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.3669586, y: 5.090889, z: 1.3154812}
+  m_Center: {x: -0.44787216, y: 1.5085411, z: 0.41261733}
+--- !u!114 &1375879129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1313527059013082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f7f5749605b9a14e8d22d4e00d01de8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UpdateOnTransform: 0
+  m_UpdateTimeInterval: 0.1

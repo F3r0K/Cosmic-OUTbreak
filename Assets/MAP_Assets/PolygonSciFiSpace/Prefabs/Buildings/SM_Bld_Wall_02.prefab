@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: -4008591542916772252}
   - component: {fileID: 497503310}
   - component: {fileID: 497503314}
-  - component: {fileID: 497503318}
   m_Layer: 0
   m_Name: SM_Bld_Wall_02
   m_TagString: Untagged
@@ -97,11 +96,11 @@ LODGroup:
   serializedVersion: 2
   m_LocalReferencePoint: {x: -2.499999, y: 1.5017643, z: 0.4015961}
   m_Size: 5.000004
-  m_FadeMode: 1
+  m_FadeMode: 0
   m_AnimateCrossFading: 0
   m_LastLODIsBillboard: 0
   m_LODs:
-  - screenRelativeHeight: 0.34417424
+  - screenRelativeHeight: 0.15049914
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 23207614301020550}
@@ -133,32 +132,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_UpdateOnTransform: 0
   m_UpdateTimeInterval: 0.1
---- !u!114 &497503318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1687514605647560}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cee741afc4564f5f99593e321d817497, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cache:
-    transform: {fileID: 4787029479463196}
-    materials:
-    - {fileID: 2100000, guid: 4cee7a5983b187943adc589b9cb1f084, type: 2}
-    renderer: {fileID: 23207614301020550}
-    mesh: {fileID: 4300000, guid: 8fb1a2ea5fcabd740b1733c9c19cff4c, type: 3}
-    isSkinnedMesh: 0
-    meshRenderer: {fileID: 23207614301020550}
-    meshFilter: {fileID: 33812156187176312}
-    skinnedMeshRenderer: {fileID: 0}
-    isCached: 1
-    isCorrectionRequired: 1
-  key: 
-  isStatic: 1
-  disableRenderer: 1
-  removeMaterials: 0
-  combinerSource: 3

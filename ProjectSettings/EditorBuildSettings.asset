@@ -6,9 +6,24 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Cosmic Outbreak/Demo/Menu.unity
+    guid: 98cb53002ec656246ad4275c9cf1ee86
+  - enabled: 1
     path: Assets/Cosmic Outbreak/Demo/MainScene.unity
     guid: c42232b5c9c9563428f5e568845968bb
   - enabled: 1
-    path: Assets/Cosmic Outbreak/Demo/DemoScripts/1.unity
-    guid: 9167c2f54098b9843bdb392ed6756f89
+    path: Assets/Cosmic Outbreak/Demo/LoadScene.unity
+    guid: 7a33ab912c323c54eacfcef03513f44c
+  - enabled: 1
+    path: Assets/UI/Loading Screen Studio/Scenes/Demo.unity
+    guid: a0c7c2db1dc9801459e5236db993a808
+  - enabled: 1
+    path: Assets/Plugins/SaveMePro 2/Scenes/Learning/Complete Game/SMP2_CompleteGame_Menu_Learn.unity
+    guid: 32ac8a385d905dc4c90edcec2a770d40
+  - enabled: 1
+    path: Assets/Plugins/SaveMePro 2/Scenes/Learning/Complete Game/inGame_Scenes/SMP2_CompleteGame_GameScene_Learn.unity
+    guid: e99c3c78fe9547941b604821a37f87d5
+  - enabled: 1
+    path: Assets/Plugins/SaveMePro 2/Scenes/Learning/Complete Game/inGame_Scenes/SMP2_CompleteGame_GameScene_RockWorld_Learn.unity
+    guid: d31dc744798fcb541ad335895202b26a
   m_configObjects: {}
