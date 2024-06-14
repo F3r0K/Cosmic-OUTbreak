@@ -12,10 +12,7 @@ GameObject:
   - component: {fileID: 33717272917265742}
   - component: {fileID: 23878910916032720}
   - component: {fileID: 9153708273219428953}
-  - component: {fileID: -3453734417900708942}
-  - component: {fileID: 103024079}
   - component: {fileID: 103024084}
-  - component: {fileID: 103024089}
   m_Layer: 0
   m_Name: SM_Bld_Wall_06
   m_TagString: Untagged
@@ -102,39 +99,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.000004, y: 4.9954405, z: 0.82667845}
   m_Center: {x: -2.499999, y: 1.5022796, z: 0.413327}
---- !u!205 &-3453734417900708942
-LODGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1483115249047146}
-  serializedVersion: 2
-  m_LocalReferencePoint: {x: -2.500001, y: 1.5022798, z: 0.413327}
-  m_Size: 5.000004
-  m_FadeMode: 1
-  m_AnimateCrossFading: 0
-  m_LastLODIsBillboard: 0
-  m_LODs:
-  - screenRelativeHeight: 0.3187716
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 23878910916032720}
-    - renderer: {fileID: 23669584636048866}
-  m_Enabled: 1
---- !u!65 &103024079
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1483115249047146}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 5.000004, y: 4.9954405, z: 0.82667845}
-  m_Center: {x: -2.5, y: 1.5022796, z: 0.413327}
 --- !u!114 &103024084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,35 +113,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_UpdateOnTransform: 0
   m_UpdateTimeInterval: 0.1
---- !u!114 &103024089
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1483115249047146}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cee741afc4564f5f99593e321d817497, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cache:
-    transform: {fileID: 4301472655502874}
-    materials:
-    - {fileID: 2100000, guid: 4cee7a5983b187943adc589b9cb1f084, type: 2}
-    renderer: {fileID: 23878910916032720}
-    mesh: {fileID: 4300000, guid: fa62e57725e80374f914f93c070f2245, type: 3}
-    isSkinnedMesh: 0
-    meshRenderer: {fileID: 23878910916032720}
-    meshFilter: {fileID: 33717272917265742}
-    skinnedMeshRenderer: {fileID: 0}
-    isCached: 1
-    isCorrectionRequired: 1
-  key: 
-  isStatic: 1
-  disableRenderer: 1
-  removeMaterials: 0
-  combinerSource: 3
 --- !u!1 &1526358731612922
 GameObject:
   m_ObjectHideFlags: 0
@@ -190,7 +125,6 @@ GameObject:
   - component: {fileID: 33445774996838066}
   - component: {fileID: 23669584636048866}
   - component: {fileID: 515666465}
-  - component: {fileID: 515666469}
   m_Layer: 0
   m_Name: SM_Bld_Wall_Glass_06
   m_TagString: Untagged
@@ -277,32 +211,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_UpdateOnTransform: 0
   m_UpdateTimeInterval: 0.1
---- !u!114 &515666469
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1526358731612922}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cee741afc4564f5f99593e321d817497, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cache:
-    transform: {fileID: 4326368071170644}
-    materials:
-    - {fileID: 2100000, guid: a61f84ebe1463174f9b8550cbfd80fbe, type: 2}
-    renderer: {fileID: 23669584636048866}
-    mesh: {fileID: 0}
-    isSkinnedMesh: 0
-    meshRenderer: {fileID: 23669584636048866}
-    meshFilter: {fileID: 33445774996838066}
-    skinnedMeshRenderer: {fileID: 0}
-    isCached: 1
-    isCorrectionRequired: 0
-  key: 
-  isStatic: 1
-  disableRenderer: 1
-  removeMaterials: 0
-  combinerSource: 3
